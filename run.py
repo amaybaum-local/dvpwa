@@ -1,13 +1,9 @@
 import sys
 import logging
 from yaml import Loader, Dumper
-from jinja2 import Template
+from jinja2 import utils, sandbox
 from aiohttp.web import run_app
 from sqli.app import init as init_app
-
-data = load(stream, Loader=Loader)
-template = Template('Hello {{ name }}!')
-template.render(name='John Doe')
 
 log = logging.getLogger(__name__)
 
